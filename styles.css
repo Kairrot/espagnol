@@ -132,6 +132,40 @@ body {
     font-weight: 800;
 }
 
+.slider .row-wrap {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+.slider .row {
+    position: relative;
+    width: 50px;
+    height: 3px;
+    background-color: #FF0000;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.slider .row::before,
+.slider .row::after {
+    content:"";
+    position: absolute;
+    right: -1px;
+    width: 10px;
+    height: 3px;
+    background-color: #FF0000;
+    border-radius: 5px;
+}
+
+.slider .row::before { transform: rotate(45deg); top: -3px; }
+.slider .row::after { transform: rotate(-45deg); top: 3px; }
+
 
 .slider .ground {
     width: 100%;
