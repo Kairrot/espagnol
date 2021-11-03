@@ -1,0 +1,216 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(#FFD07F, #FDA65D);
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 400%;
+    width: 100vw;
+    text-align: center;
+}
+
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 80%;
+    max-height: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.content .start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 200%;
+    height: 100%;
+    text-align: center;
+}
+.content .start * {
+    display: block;
+}
+
+.content .intro {
+    width: 50%;
+    margin-bottom: 18px;
+}
+.content .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .images .img1 { margin-right: 10px;}
+.content .images .img2 { margin-left: 10px;}
+.content .mouse {
+    margin-top: 15px;
+}
+
+
+.content .item {
+    display: none;
+    /*display: flex;*/
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 25px;
+    padding: 10px;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+.content .item .top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.content .item .bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.slider {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.slider .slide {
+    position: absolute;
+    bottom: 10px;
+    background-image: url(./assets/images/van.png);
+    background-size: contain;
+    background-position: -30px 20px;
+    width: 200px;
+    height: 100px;
+    transition: all ease .4s;
+}
+
+.slider .elements {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slider .elements .item {
+    width: 200px;
+    height: 200px;
+    z-index: 1000;
+    clip-path: polygon(0 0);
+    transition: all ease .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+
+.slider .ground {
+    width: 100%;
+    height: 10px;
+    background: #0f0f0f;
+}
+
+
+
+.icon-scroll {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 40px;
+    height: 70px;
+    border: solid black 1px;
+    border-radius: 25px;
+    transition: opacity 1.5s;
+    opacity: 0;
+}
+.icon-scroll::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    top: 20%;
+    animation: scroll 1.5s infinite;
+}
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        top: 20%;
+    }
+    100% {
+        opacity: 0;
+        top: 75%
+    }
+}
+
+
+
+.reserv {
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: #49FF00;
+    left:0;
+    top:0;
+    transition: transform ease-in-out 1.5s;
+    transform: translateY(-100%) scale(0);
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserv .img {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.reserv .text {
+    font-size: 70px;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.reserv .finish {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%)
+}
